@@ -1,0 +1,169 @@
+.page {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+@media (min-width: 640px) {
+  .page {
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .page {
+    padding: 2rem;
+  }
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
+  .headerRow {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.pageTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-heading);
+}
+
+@media (min-width: 640px) {
+  .pageTitle {
+    font-size: 1.5rem;
+  }
+}
+
+.pageSubtitle {
+  font-size: 0.875rem;
+  color: var(--dark-text);
+  margin-top: 0.25rem;
+}
+
+/* Layer Controls */
+.layers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.layerBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1px solid;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: none;
+}
+
+.layerBtnActive {
+  background-color: rgba(34, 197, 94, 0.15);
+  border-color: rgba(34, 197, 94, 0.3);
+  color: var(--primary);
+}
+
+.layerBtnInactive {
+  background-color: var(--dark-card);
+  border-color: var(--dark-border);
+  color: var(--dark-text);
+}
+
+.layerBtnInactive:hover {
+  border-color: rgba(161, 161, 170, 0.3);
+}
+
+/* Map container */
+.mapWrapper {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  border: 1px solid var(--dark-border);
+  height: 60vh;
+  min-height: 350px;
+}
+
+@media (min-width: 640px) {
+  .mapWrapper {
+    height: 65vh;
+  }
+}
+
+@media (min-width: 1024px) {
+  .mapWrapper {
+    height: calc(100vh - 240px);
+  }
+}
+
+/* Popup styles */
+.popupContent {
+  min-width: 180px;
+}
+
+.popupHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.popupTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.popupRows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-size: 0.75rem;
+}
+
+.popupRow {
+  display: flex;
+  justify-content: space-between;
+}
+
+.popupLabel {
+  opacity: 0.7;
+}
+
+.popupValue {
+  font-weight: 500;
+}
+
+.feedPreview {
+  margin-top: 0.5rem;
+  height: 4rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* ─── LIGHT MODE ─── */
+:root[data-theme="light"] .card {
+  background: #ffffff;
+  border-color: #c4ecc8;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+:root[data-theme="light"] .feedPreview {
+  background-color: rgba(241,255,231,.6);
+}

@@ -1,0 +1,132 @@
+.card {
+  border: 1px solid var(--card-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  transition: all 0.3s;
+  animation: fade-in-up 0.5s ease-out forwards;
+  background: linear-gradient(to bottom right, var(--card-from), var(--card-to));
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+@media (min-width: 640px) {
+  .card {
+    padding: 1.25rem;
+  }
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.title {
+  font-size: 10px;
+  color: var(--dark-text);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 640px) {
+  .title {
+    font-size: 0.75rem;
+  }
+}
+
+.value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-heading);
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .value {
+    font-size: 1.5rem;
+  }
+}
+
+.iconBox {
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--icon-bg);
+  color: var(--icon-color);
+}
+
+@media (min-width: 640px) {
+  .iconBox {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.trend {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-top: 0.5rem;
+}
+
+@media (min-width: 640px) {
+  .trend {
+    margin-top: 0.75rem;
+  }
+}
+
+.trendIcon {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+@media (min-width: 640px) {
+  .trendIcon {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+
+.trendValue {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+@media (min-width: 640px) {
+  .trendValue {
+    font-size: 0.75rem;
+  }
+}
+
+.trendPositive {
+  color: var(--success);
+}
+
+.trendNegative {
+  color: var(--danger);
+}
+
+.trendLabel {
+  font-size: 10px;
+  color: var(--dark-text);
+  margin-left: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .trendLabel {
+    font-size: 0.75rem;
+  }
+}
+
+/* ─── LIGHT MODE ─── */
+:root[data-theme="light"] .card {
+  background: linear-gradient(to bottom right, #ffffff, #f4fff0);
+  border-color: #c4ecc8;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}

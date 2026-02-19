@@ -1,0 +1,343 @@
+/* Transport Page */
+.page {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+@media (min-width: 640px) { .page { padding: 1.5rem; } }
+@media (min-width: 1024px) { .page { padding: 2rem; gap: 2rem; } }
+
+.pageTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-heading);
+}
+@media (min-width: 640px) { .pageTitle { font-size: 1.5rem; } }
+
+.pageSubtitle {
+  font-size: 0.875rem;
+  color: var(--dark-text);
+  margin-top: 0.25rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+@media (min-width: 640px) {
+  .statsGrid { grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+}
+
+.statCard {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+  animation: fade-in-up 0.5s ease both;
+}
+@media (min-width: 640px) { .statCard { padding: 1.25rem; } }
+
+.statValue {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--dark-heading);
+}
+@media (min-width: 640px) { .statValue { font-size: 1.5rem; } }
+
+.statLabel {
+  font-size: 0.75rem;
+  color: var(--dark-text);
+  margin-top: 0.25rem;
+}
+@media (min-width: 640px) { .statLabel { font-size: 0.875rem; } }
+
+/* Layout Rows */
+.rowThirds {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .rowThirds { grid-template-columns: 2fr 1fr; gap: 1.5rem; }
+}
+
+.rowHalves {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+@media (min-width: 1024px) {
+  .rowHalves { grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+}
+
+/* Card */
+.card {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+@media (min-width: 640px) { .card { padding: 1.25rem; } }
+
+.cardHeader {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dark-heading);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Map Card (no padding, overflow hidden) */
+.mapCard {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+
+.mapCardHeader {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--dark-border);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--dark-heading);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (min-width: 640px) { .mapCardHeader { padding: 1rem 1.25rem; } }
+
+.mapWrap {
+  height: 16rem;
+}
+@media (min-width: 640px) { .mapWrap { height: 18rem; } }
+@media (min-width: 1024px) { .mapWrap { height: 20rem; } }
+
+/* Tooltip */
+.tooltip {
+  background: var(--dark-card);
+  border: 1px solid var(--dark-border);
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+.tooltipLabel {
+  font-size: 0.75rem;
+  color: var(--dark-text);
+  margin-bottom: 0.25rem;
+}
+.tooltipValue {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Popup */
+.popupContent {
+  min-width: 160px;
+}
+.popupTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+.popupSub {
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+}
+
+/* Traffic Simulator */
+.simSlider {
+  width: 100%;
+  height: 0.5rem;
+  background: var(--dark-border);
+  border-radius: 0.5rem;
+  appearance: none;
+  cursor: pointer;
+  accent-color: var(--primary);
+}
+
+.simTicks {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--dark-text);
+  margin-top: 0.25rem;
+}
+
+.simGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.simBox {
+  background: rgba(0,0,0,0.5);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.simBoxLabel {
+  font-size: 10px;
+  color: var(--dark-text);
+  text-transform: uppercase;
+}
+
+.simBoxValue {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.impactBar {
+  width: 100%;
+  background: var(--dark-border);
+  border-radius: 9999px;
+  height: 0.75rem;
+}
+
+.impactFill {
+  height: 0.75rem;
+  border-radius: 9999px;
+  transition: all 0.5s;
+}
+
+.impactHint {
+  font-size: 10px;
+  color: var(--dark-text);
+  margin-top: 0.5rem;
+}
+
+/* Bus Routes */
+.routeList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-height: 20rem;
+  overflow-y: auto;
+}
+
+.routeItem {
+  border: 1px solid var(--dark-border);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.routeItem:hover {
+  transform: scale(1.01);
+  border-color: rgba(161,161,170,0.2);
+}
+.routeItemActive {
+  border-color: rgba(34,197,94,0.4);
+  background: rgba(34,197,94,0.05);
+}
+
+.routeRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.routeInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.routeBadge {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.routeBadgeOnTime {
+  background: rgba(74,222,128,0.15);
+  color: var(--success);
+}
+.routeBadgeDelayed {
+  background: rgba(239,68,68,0.15);
+  color: var(--danger);
+}
+
+.routeName {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--dark-heading);
+}
+
+.routeMeta {
+  font-size: 10px;
+  color: var(--dark-text);
+}
+
+.routeStatus {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.125rem 0.5rem;
+  border-radius: 9999px;
+}
+.statusOnTime {
+  background: rgba(74,222,128,0.15);
+  color: var(--success);
+}
+.statusDelayed {
+  background: rgba(239,68,68,0.15);
+  color: var(--danger);
+}
+
+.routeDetail {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid rgba(28,28,28,0.5);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  color: var(--dark-text);
+}
+
+.etaBadge {
+  background: rgba(34,197,94,0.1);
+  color: var(--primary);
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+/* Spacing helper */
+.spaceY3 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+@media (min-width: 640px) { .spaceY4 { gap: 1rem; } }
+
+/* ─── LIGHT MODE ─── */
+:root[data-theme="light"] .statCard {
+  background: #ffffff;
+  border-color: #c4ecc8;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+:root[data-theme="light"] .card {
+  background: #ffffff;
+  border-color: #c4ecc8;
+  box-shadow: 0 1px 4px rgba(0,0,0,.05);
+}
+:root[data-theme="light"] .tooltip {
+  background: #ffffff;
+  border-color: #c4ecc8;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+}
+:root[data-theme="light"] .simBox {
+  background: rgba(241,255,231,.5);
+}
+:root[data-theme="light"] .routeDetail {
+  border-top-color: #c4ecc8;
+}
