@@ -1213,6 +1213,38 @@
 :root[data-theme="light"] .testimonials {
   background: linear-gradient(170deg, #e8ffe0 0%, #F1FFE7 100%);
 }
+:root[data-theme="light"] .testimonials::before {
+  background: radial-gradient(circle, rgba(68,207,108,.08) 0%, transparent 70%);
+}
+:root[data-theme="light"] .sectionBadge {
+  border-color: rgba(68,207,108,.35);
+  background: rgba(68,207,108,.08);
+}
+:root[data-theme="light"] .testiCard {
+  box-shadow: 0 2px 12px rgba(0,0,0,.04);
+}
+:root[data-theme="light"] .testiCard:hover {
+  box-shadow: 0 8px 40px rgba(68,207,108,.15);
+}
+:root[data-theme="light"] .testiAvatar {
+  background: rgba(68,207,108,.1);
+  border-color: rgba(68,207,108,.25);
+}
+
+/* Footer */
+:root[data-theme="light"] .footer {
+  background: linear-gradient(180deg, transparent 0%, rgba(68,207,108,.06) 100%);
+  border-top-color: #c4ecc8;
+}
+:root[data-theme="light"] .footerSocials a {
+  border-color: #c4ecc8;
+}
+:root[data-theme="light"] .footerSocials a:hover {
+  background: rgba(68,207,108,.1);
+}
+:root[data-theme="light"] .footerDivider {
+  background: #c4ecc8;
+}
 
 /* FAQ */
 :root[data-theme="light"] .faqSection {
